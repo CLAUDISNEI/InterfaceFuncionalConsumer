@@ -2,6 +2,7 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 import model.entities.Produto;
 import model.util.AlmentoPreco;
@@ -16,7 +17,13 @@ public class ProgramaInterfaceFuncionalConsumer {
 		list.add(new Produto("Tablet", 350.50));
 		list.add(new Produto("HD Case", 80.90));
 		
-		list.forEach(Produto::nonSstaticPrecoUpdate);
+		double aumento = 1.1;
+		
+		Consumer<Produto> cons = p -> {
+			p.setPreco(p.getPreco()*aumento);
+		};
+		
+		list.forEach(cons);
 		
 		list.forEach(System.out::println);
 	}
