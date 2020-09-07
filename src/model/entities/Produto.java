@@ -37,6 +37,10 @@ public class Produto {
 	public static void staticPrecoUpdate(Produto p) {
 		p.setPreco(p.getPreco() * 1.1);
 	}
+	
+	public void nonSstaticPrecoUpdate() {
+		preco = preco * 1.1;
+	}
 
 	@Override
 	public String toString() {

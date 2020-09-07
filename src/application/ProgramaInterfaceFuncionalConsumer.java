@@ -16,7 +16,7 @@ public class ProgramaInterfaceFuncionalConsumer {
 		list.add(new Produto("Tablet", 350.50));
 		list.add(new Produto("HD Case", 80.90));
 		
-		list.forEach(Produto::staticPrecoUpdate);
+		list.forEach(Produto::nonSstaticPrecoUpdate);
 		
 		list.forEach(System.out::println);
 	}
