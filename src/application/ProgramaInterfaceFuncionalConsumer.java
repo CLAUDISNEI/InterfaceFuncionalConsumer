@@ -19,11 +19,7 @@ public class ProgramaInterfaceFuncionalConsumer {
 		
 		double aumento = 1.1;
 		
-		Consumer<Produto> cons = p -> {
-			p.setPreco(p.getPreco()*aumento);
-		};
-		
-		list.forEach(cons);
+		list.forEach(p -> p.setPreco(p.getPreco()*aumento));
 		
 		list.forEach(System.out::println);
 	}
